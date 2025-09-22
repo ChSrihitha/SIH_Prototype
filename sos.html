@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SafeTour – Emergency Response</title>
+  <link rel="stylesheet" href="styles/sos.css" />
+  <link rel="stylesheet" href="styles/nav.css" />
+</head>
+<body>
+<!-- put this at top of each page (index.html, dashboard.html, digital-id.html, sos.html) -->
+<header class="site-navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="logo">🛡️ <span class="logo-text">SafeTour</span></a>
+
+    <!-- center nav (will be centered by CSS+JS) -->
+    <nav class="nav-center" id="nav-center">
+      <a href="ID.html">Digital ID</a>
+      
+      <a href="dashboard.html">Dashboard</a>
+    </nav>
+
+    <a href="index.html" class="btn-back" id="btn-back">← Back to Home</a>
+
+    <!-- mobile toggle (visible only on small screens) -->
+    <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation">☰</button>
+  </div>
+</header>
+
+
+  <main class="container">
+    <h1><span class="emergency">Emergency</span> <span class="response">Response</span></h1>
+    <p class="subtitle">Immediate assistance and emergency contacts</p>
+
+    <section class="sos-section">
+      <h2>Emergency SOS</h2>
+      <p>Press the button below to immediately alert emergency services and send your location</p>
+      <button id="sosBtn" class="sos-button">SOS</button>
+      <p class="tap-text">Tap to send emergency alert</p>
+    </section>
+
+    <section class="contacts">
+      <h2>Emergency Contacts</h2>
+      <div class="contacts-grid">
+        <div class="contact-card police">
+          <span>Police Emergency</span>
+          <span class="number">100</span>
+          <button class="call-btn" onclick="callNumber('100')">Call</button>
+        </div>
+        <div class="contact-card medical">
+          <span>Medical Emergency</span>
+          <span class="number">108</span>
+          <button class="call-btn" onclick="callNumber('108')">Call</button>
+        </div>
+        <div class="contact-card fire">
+          <span>Fire Department</span>
+          <span class="number">112</span>
+          <button class="call-btn" onclick="callNumber('112')">Call</button>
+        </div>
+        <div class="contact-card tourist">
+          <span>Tourist Helpline</span>
+          <span class="number">1-800-TOURIST</span>
+          <button class="call-btn" onclick="callNumber('1800TOURIST')">Call</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="safety-info">
+      <h2>Safety Information</h2>
+      <div class="location-box">
+        <p><strong>Your Current Location</strong></p>
+        <p id="coords">Latitude: — | Longitude: —</p>
+        <button class="share-btn">Location Shared with Emergency Services</button>
+      </div>
+      <div class="guidelines">
+        <h3>Emergency Guidelines</h3>
+        <ul>
+          <li>Stay calm and assess the situation</li>
+          <li>Move to a safe location if possible</li>
+          <li>Provide clear information to responders</li>
+          <li>Keep your digital ID accessible</li>
+          <li>Follow instructions from authorities</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <script src="scripts/sos.js"></script>
+  <script src="scripts/nav.js"></script>
+</body>
+</html>

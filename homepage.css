@@ -1,0 +1,218 @@
+/* ------------------------------
+   Reset & Base
+------------------------------ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Segoe UI', sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* ------------------------------
+   Buttons
+------------------------------ */
+.btn-primary {
+  background: #00b56a;
+  color: #fff;
+  border: none;
+  padding: 0.8em 1.6em;
+  border-radius: 30px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s;
+  text-decoration: none;
+  display: inline-block;
+}
+.btn-primary:hover {
+  background: #009a5b;
+}
+
+/* ------------------------------
+   Navbar
+------------------------------ */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;   /* logo | links | button */
+  padding: 1.2em 8%;
+  background: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Logo */
+.logo {
+  font-weight: 700;
+  font-size: 1.5em;
+  color: #00b56a;
+  white-space: nowrap;
+}
+
+/* Navigation Links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;                        /* exact horizontal space */
+}
+.nav-links li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+.nav-links li a:hover {
+  color: #00b56a;
+}
+
+/* “Get Started” button in navbar */
+.navbar .btn-primary {
+  margin-left: 2rem;
+  white-space: nowrap;
+}
+
+/* ------------------------------
+   Hero Section
+------------------------------ */
+.hero {
+  text-align: center;
+  padding: 5em 10%;
+  background: #f7f7f7;
+}
+.hero .badge {
+  display: inline-block;
+  background: #0066ff;
+  color: #fff;
+  padding: 0.3em 1em;
+  border-radius: 20px;
+  font-size: 0.9em;
+  margin-bottom: 1em;
+}
+.hero h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 0.5em;
+}
+.hero h1 span { color: #00b56a; }
+.hero p { max-width: 600px; margin: 0 auto 1.5em; }
+
+/* ------------------------------
+   Steps
+------------------------------ */
+.steps {
+  padding: 4em 10%;
+  text-align: center;
+}
+.steps h2 span { color: #00b56a; }
+.step-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2em;
+  margin-top: 2em;
+}
+.step h3 {
+  font-size: 2em;
+  color: #00b56a;
+  margin-bottom: 0.5em;
+}
+
+/* ------------------------------
+   Digital ID Section
+------------------------------ */
+.digital-id {
+  background: #e8f9f0;
+  padding: 4em 10%;
+  text-align: center;
+}
+.digital-id h2 { font-size: 2rem; margin-bottom: 1em; }
+.digital-id ul { list-style: none; margin-bottom: 1.5em; }
+.digital-id li::before {
+  content: "✔";
+  color: #00b56a;
+  margin-right: 0.5em;
+}
+
+/* ------------------------------
+   Features Tabs
+------------------------------ */
+.features {
+  padding: 4em 10%;
+  text-align: center;
+}
+.tabs {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1.5em;
+}
+.tab {
+  border: none;
+  background: #ddd;
+  padding: 0.7em 1.5em;
+  cursor: pointer;
+  border-radius: 20px;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+.tab.active {
+  background: #00b56a;
+  color: #fff;
+}
+.content {
+  display: none;
+  max-width: 600px;
+  margin: auto;
+}
+.content.active { display: block; }
+
+/* ------------------------------
+   CTA Section
+------------------------------ */
+.cta {
+  background: #f7f7f7;
+  text-align: center;
+  padding: 4em 10%;
+}
+.cta h2 span { color: #00b56a; }
+
+/* ------------------------------
+   Footer
+------------------------------ */
+footer {
+  background: #111;
+  color: #fff;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 3em 10%;
+}
+footer .footer-links { margin: 1em 0; }
+footer .footer-links a {
+  display: block;
+  color: #bbb;
+  text-decoration: none;
+  margin: 0.3em 0;
+}
+footer .footer-links a:hover { color: #fff; }
+
+/* ------------------------------
+   Responsive
+------------------------------ */
+@media (max-width: 768px) {
+  .navbar {
+    flex-wrap: wrap;
+  }
+  .nav-links {
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    margin-top: 1rem;
+  }
+  .navbar .btn-primary {
+    margin: 1rem auto 0;
+  }
+}

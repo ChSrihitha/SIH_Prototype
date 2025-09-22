@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TourSafe - Digital Tourist ID</title>
+  <link rel="stylesheet" href="styles/id.css">
+  <link rel="stylesheet" href="styles/nav.css">
+</head>
+<body>
+ <!-- put this at top of each page (index.html, dashboard.html, digital-id.html, sos.html) -->
+<header class="site-navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="logo">🛡️ <span class="logo-text">SafeTour</span></a>
+
+    <!-- center nav (will be centered by CSS+JS) -->
+    <nav class="nav-center" id="nav-center">
+      <a href="dashboard.html">Dashboard</a>
+      <a href="sos.html">Emergency</a>
+      
+    </nav>
+
+    <a href="index.html" class="btn-back" id="btn-back">← Back to Home</a>
+    <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation">☰</button>
+  </div>
+</header>
+
+  <div class="container">
+    <h1>Create Your Digital <span>Tourist ID</span></h1>
+    <p class="subtitle">Secure digital identification for safe and verified travel experiences</p>
+
+    <form id="touristForm">
+      <!-- Personal Information -->
+      <div class="form-section">
+        <h2>Personal Information</h2>
+        <div class="grid-2">
+          <div>
+            <label for="fullName">Full Name *</label>
+            <input type="text" id="fullName" name="fullName" placeholder="Enter your full name" required>
+          </div>
+          <div>
+            <label for="passportId">Passport/ID Number *</label>
+            <input type="text" id="passportId" name="passportId" placeholder="Enter passport or ID number" required>
+          </div>
+          <div>
+            <label for="nationality">Nationality *</label>
+            <input type="text" id="nationality" name="nationality" placeholder="Enter your nationality" required>
+          </div>
+        </div>
+      </div>
+
+      <!-- Emergency Contact -->
+      <div class="form-section">
+        <h2>Emergency Contact</h2>
+        <div class="grid-2">
+          <div>
+            <label for="emergencyContact">Contact Name *</label>
+            <input type="text" id="emergencyContact" name="emergencyContact" placeholder="Enter emergency contact name" required>
+          </div>
+          <div>
+            <label for="emergencyPhone">Contact Phone *</label>
+            <input type="tel" id="emergencyPhone" name="emergencyPhone" placeholder="Enter emergency phone number" required>
+          </div>
+        </div>
+      </div>
+
+      <!-- Travel Information -->
+      <div class="form-section">
+        <h2>Travel Information</h2>
+        <label for="itinerary">Trip Itinerary</label>
+        <textarea id="itinerary" name="itinerary" placeholder="Enter your trip details..."></textarea>
+      </div>
+
+      <button type="submit" class="btn">Generate ID</button>
+    </form>
+
+    <!-- Display Generated ID -->
+    <div id="idCard" class="id-card hidden">
+      <h2>Your Digital Tourist ID</h2>
+      <p><strong>Name:</strong> <span id="displayName"></span></p>
+      <p><strong>ID Number:</strong> <span id="displayID"></span></p>
+      <p><strong>Nationality:</strong> <span id="displayNationality"></span></p>
+      <p><strong>Emergency Contact:</strong> <span id="displayEmergency"></span></p>
+      <p><strong>Trip Itinerary:</strong> <span id="displayItinerary"></span></p>
+    </div>
+
+  </div>
+
+  <script src="scripts/id.js"></script>
+  <script src="scripts/navbar.js"></script>
+</body>
+</html>

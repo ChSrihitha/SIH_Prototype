@@ -1,0 +1,131 @@
+/* Reset & base */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: "Segoe UI", Tahoma, sans-serif;
+  background: #fafafa;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Top bar */
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: #fff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+.logo {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #0a7a6f;
+}
+.top-bar nav a {
+  margin-left: 1.5rem;
+  text-decoration: none;
+  color: #444;
+}
+.top-bar nav a:hover { color: #0a7a6f; }
+
+.container {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+h1 .emergency { color: #222; }
+h1 .response { color: #e63946; }
+.subtitle {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #555;
+}
+
+/* SOS Section */
+.sos-section {
+  text-align: center;
+  background: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+.sos-button {
+  background: #e63946;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  font-size: 2rem;
+  font-weight: bold;
+  cursor: pointer;
+  margin: 1rem 0;
+  transition: transform 0.2s ease;
+}
+.sos-button:hover {
+  transform: scale(1.05);
+}
+.tap-text { color: #666; }
+
+/* Contacts */
+.contacts {
+  margin-bottom: 2rem;
+}
+.contacts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+  gap: 1rem;
+}
+.contact-card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.contact-card span { display: block; margin-bottom: 0.5rem; }
+.contact-card .number { font-weight: bold; }
+.call-btn {
+  background: #2a9d8f;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.call-btn:hover { background: #21867a; }
+
+/* Safety Info */
+.safety-info {
+  display: block;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+.location-box, .guidelines {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+.share-btn {
+  margin-top: 1rem;
+  background: #0a7a6f;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+}
+ul { margin-top: 1rem; padding-left: 1.2rem; }
+
+@media (max-width: 700px) {
+  .safety-info { grid-template-columns: 1fr; }
+}

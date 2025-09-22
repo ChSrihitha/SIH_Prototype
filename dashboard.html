@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SafeTour – Safety Dashboard</title>
+
+  <!-- Leaflet Map CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="styles/dashboard.css">
+  <link rel="stylesheet" href="styles/nav.css">
+</head>
+<body>
+<!-- put this at top of each page (index.html, dashboard.html, digital-id.html, sos.html) -->
+<header class="site-navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="logo">🛡️ <span class="logo-text">SafeTour</span></a>
+
+    <!-- center nav (will be centered by CSS+JS) -->
+    <nav class="nav-center" id="nav-center">
+      <a href="ID.html">Digital ID</a>
+      <a href="sos.html">Emergency</a>
+     
+    </nav>
+
+    <a href="index.html" class="btn-back" id="btn-back">← Back to Home</a>
+    <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation">☰</button>
+  </div>
+</header>
+
+
+  <main class="container">
+    <h1>Safety <span class="highlight">Dashboard</span></h1>
+    <p class="subtitle">Real-time monitoring and tourist location information</p>
+
+    <!-- Info Cards -->
+    <section class="cards">
+      <div class="card">
+        <h3>📍 Current Location</h3>
+        <p id="current-location">Lat: ---, Lng: ---</p>
+        <span class="badge safe">Safe Area</span>
+      </div>
+
+      <div class="card">
+        <h3>🗺️ Northeast Attractions</h3>
+        <p>Verified cultural & natural heritage sites</p>
+        <span class="badge info">14 Locations</span>
+      </div>
+
+      <div class="card">
+        <h3>⏱️ Regional Monitoring</h3>
+        <p>Weather and terrain safety tracking</p>
+        <span class="badge live">Live</span>
+      </div>
+    </section>
+
+    <!-- Geo-Fencing & Map -->
+    <section class="map-section">
+      <div class="map-header">
+        <h2>Geo-Fencing & Interactive Map</h2>
+        <span class="badge live">Live Updates</span>
+      </div>
+      <div id="map"></div>
+    </section>
+
+    <!-- Attractions List -->
+    <section class="attractions">
+      <h2>Northeast India Attractions</h2>
+      <article>
+        <h3>Kaziranga National Park <span class="badge info">Verified</span></h3>
+        <p>A UNESCO World Heritage Site, famous for one-horned rhinoceroses and rich biodiversity.</p>
+        <small>Best visited Nov–Apr | Location: Assam, India</small>
+      </article>
+
+      <article>
+        <h3>Dawki <span class="badge info">Verified</span></h3>
+        <p>Crystal-clear waters of the Umngot River with boating experiences and a border market.</p>
+        <small>Best visited Oct–Apr | Location: Meghalaya, India</small>
+      </article>
+    </section>
+
+    <!-- Quick Actions -->
+    <section class="quick-actions">
+      <h2>Quick Actions</h2>
+      <button class="btn danger">🚨 Emergency SOS</button>
+      <button class="btn secondary">🆔 View Digital ID</button>
+      <button class="btn success" id="update-location">📡 Update Location</button>
+    </section>
+  </main>
+
+  <!-- Leaflet JS -->
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <!-- Custom JS -->
+  <script src="scripts/dashbord.js"></script>
+  <script src="scripts/navbar.js"></script>
+</body>
+</html>

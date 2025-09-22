@@ -1,0 +1,150 @@
+/* Basic Reset & Fonts */
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #f9f9fb;
+  color: #333;
+}
+
+/* Header */
+.topbar {
+  background: #fff;
+  border-bottom: 1px solid #e0e0e0;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.topbar .logo {
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+.topbar nav a {
+  margin-left: 1rem;
+  text-decoration: none;
+  color: #444;
+  font-weight: 500;
+}
+.topbar nav a.active {
+  color: #0d8d5f;
+}
+
+/* Container */
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 2rem;
+}
+.highlight { color: #0d8d5f; }
+.subtitle { color: #666; margin-bottom: 2rem; }
+
+/* Responsive Container */
+@media (max-width: 600px) {
+  .container {
+    padding: 1rem 0.5rem;
+  }
+}
+
+/* Cards */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2.5rem;
+}
+.card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 1.2rem;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+}
+.card h3 { margin-top: 0; }
+
+@media (max-width: 600px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+  .card {
+    padding: 1rem 0.7rem;
+  }
+}
+
+/* Badges */
+.badge {
+  display: inline-block;
+  padding: 0.25rem 0.6rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+.badge.safe { background: #d4edda; color: #155724; }
+.badge.info { background: #d1ecf1; color: #0c5460; }
+.badge.live { background: #fff3cd; color: #856404; }
+
+/* Map */
+.map-section {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+  margin-bottom: 2.5rem;
+}
+.map-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+#map {
+  height: 400px;
+  width: 100%;
+  border-radius: 12px;
+  min-height: 250px;
+}
+
+@media (max-width: 600px) {
+  #map {
+    height: 250px;
+  }
+}
+
+/* Attractions */
+.attractions article {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+  margin-bottom: 1rem;
+}
+.attractions h3 {
+  margin-top: 0;
+}
+
+/* Quick Actions */
+.quick-actions {
+  margin-top: 2.5rem;
+}
+.btn {
+  display: block;
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.btn.danger   { background: #dc3545; color: #fff; }
+.btn.danger:hover { background: #c82333; }
+.btn.secondary{ background: #6c757d; color: #fff; }
+.btn.secondary:hover { background: #5a6268; }
+.btn.success  { background: #28a745; color: #fff; }
+.btn.success:hover { background: #218838; }
+@media (max-width: 600px) {
+  .btn {
+    font-size: 0.95rem;
+    padding: 0.65rem;
+  }
+}
